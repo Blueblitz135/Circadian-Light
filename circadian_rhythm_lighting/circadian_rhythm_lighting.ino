@@ -8,9 +8,9 @@
 #include <sys/time.h>
 
 
-// Network Details (waterloo email is used for username and identity)
-const char* WIFI_SSID     = "Aidan’s iPhone";
-const char* WIFI_PASSWORD = "Aidan100";
+// Network Details (use your own WiFi's SSID and Password) 
+const char* WIFI_SSID     = "PLACEHOLDER"; // rewrite this field
+const char* WIFI_PASSWORD = "PLACEHOLDER"; // rewrite this field
 
 // Pins and temperature values
 #define WARM_LED_PIN 25   // DAC1
@@ -212,7 +212,6 @@ String formatTime() {
 //---------------------WI-FI Functionality---------------------
 // // Connect to wi-fi
 void connectWiFi() {
-  //WiFi.mode(WIFI_STA);
   WiFi.mode(WIFI_STA);
    
   WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
@@ -409,7 +408,6 @@ void handleMode() {
 
   server.send(200, "text/plain", "OK");
 }
-
 
 
 // --------- Setup / Loop ---------
