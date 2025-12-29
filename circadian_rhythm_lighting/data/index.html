@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Circadian Rhythm Lighting Controller</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <h1>Circadian Rhythm Lighting Controller</h1>
+    <div class="layout">
+      <div class="col left">
+        <section class="card">
+          <header class="row head">
+            <h2>Mode</h2>
+            <div id="modeDisplay" class="chip">manual</div>
+          </header>
+          <div class="panel">
+            <div class="btns">
+              <span id="clock" class="chip">Time: --:--:--</span>
+              <button id="btnManual" class="btn" data-mode="manual">Manual</button>
+              <button id="btnAuto" class="btn">Automatic</button>
+              <select id="autoMode" class="select">
+                <option value="natural">Natural</option>
+                <option value="daylight">Daylight</option>
+                <option value="night">Night</option>
+                <option value="dim">Dim</option>
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <header class="row head">
+            <h2>Power</h2>
+          </header>
+          <div class="panel">
+            <div class="power-row">
+              <button id="btnTogglePower" class="btn wide">Turn Lights Off</button>
+              <span id="powerState" class="chip">Lights ON</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <header class="row head">
+            <h2>Channel 1 - 2500K LED</h2>
+            <span class="chip"><span id="v1">0</span>/255</span>
+            <span class="chip"><span id="v1p">0</span>%</span>
+          </header>
+          <div class="panel center">
+            <input id="dac1" class="vslider" type="range" min="0" max="255" value="128">
+          </div>
+        </section>
+
+        <section class="card">
+          <header class="row head">
+            <h2>Channel 2 - 6000K LED</h2>
+            <span class="chip"><span id="v2">0</span>/255</span>
+            <span class="chip"><span id="v2p">0</span>%</span>
+          </header>
+          <div class="panel center">
+            <input id="dac2" class="vslider" type="range" min="0" max="255" value="128">
+          </div>
+        </section>
+      </div>
+
+      <div class="col right">
+        <section class="card">
+          <header class="row head">
+            <h2>Target Color Temperature</h2>
+          </header>
+          <div class="panel">
+            <span class="chip" id="targetCct">-- K</span>
+            <p class="hint">Based on the time of day, preset states in automatic modes, or manual overridden time.</p>
+          </div>
+        </section>
+
+        <section class="card" id="manualTimeCard">
+          <header class="row head">
+            <h2>Manual Time Override</h2>
+          </header>
+          <div class="panel">
+            <label class="toggle-row">
+              <input id="manualTimeToggle" type="checkbox">
+              <span>Use a manual time instead of the local time</span>
+            </label>
+            <div class="manual-time">
+              <label for="manualTimeSlider">Set manual time:</label>
+              <input id="manualTimeSlider" type="range" min="0" max="1439" value="720">
+              <div class="manual-time-row">
+                <span class="chip">Manual time: <span id="manualTimeLabel">12:00 PM</span></span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
