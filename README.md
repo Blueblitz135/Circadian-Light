@@ -10,7 +10,7 @@ An ESP32-based circadian-rhythm lighting system prototype designed to support ho
 - Exposes lightweight endpoints (e.g., for **mode**, **DAC/brightness**, and **time-based scheduling**)  
 - Built to be easy to demo: connect → open dashboard → control lights
 
-## Why this project
+## Project Aim
 Hospital environments can disrupt sleep and circadian rhythms. CircadianLight explores a non-pharmacological approach: **lighting that better matches natural day/night patterns**, aiming to reduce factors that contribute to confusion and poor sleep.
 
 ## Hardware/Software used
