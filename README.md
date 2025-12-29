@@ -1,5 +1,7 @@
 # CircadianLight
 
+![](circuit_layout.jpeg)
+
 An ESP32-based circadian-rhythm lighting system prototype designed to support hospital patient comfort by dynamically controlling **brightness** and **color temperature** throughout the day. Includes a simple **web dashboard** for real-time control over Wi-Fi.
 
 ## What it does
@@ -38,5 +40,3 @@ Hospital environments can disrupt sleep and circadian rhythms. CircadianLight ex
 - Connect to the ESP32 on your network (should automatically be connected after sketch upload if ESP32 is plugged-in to your device)  
 - Open the ESP32’s IP address in your browser, or type in "http://circadian.local/" in your browser's search bar  
 - You can now control brightness / color temperature throguh the web UI
-
-![](circuit_layout.jpeg)
