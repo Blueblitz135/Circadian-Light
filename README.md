@@ -34,8 +34,9 @@ Hospital environments can disrupt sleep and circadian rhythms. CircadianLight ex
 - Open command/search bar in Arduino IDE (default shortcut is Ctrl + Shift + P  for Windows/Linux and Cmd + Shift + P for Mac
 - Search and click onto "Upload LittleFs to Pico/ESP8266/ESP32"
 
-![Alt text](circuit_layout.jpeg)
 ### 3) Use the dashboard
 - Connect to the ESP32 on your network (should automatically be connected after sketch upload if ESP32 is plugged-in to your device)  
 - Open the ESP32’s IP address in your browser, or type in "http://circadian.local/" in your browser's search bar  
 - You can now control brightness / color temperature throguh the web UI
+
+![](circuit_layout.jpeg)
